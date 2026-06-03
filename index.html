@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+   
+</head>
+<body>
+   
+
+ 
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+    <div class="container">
+
+      <div class="d-flex align-items-center gap-3">
+        <div class="logo-icon">
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+
+        <div>
+          <h3 class="m-0 dinner">What's For Dinner</h3>
+          <p class="m-0 text-secondary small">
+            Your daily meal inspiration
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-4 nav-icon">
+        <i class="fa-solid fa-bookmark"></i>
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <i class="fa-solid fa-gear"></i>
+
+        <img src="image/imgi_1_avatar-4.jpg" class="profile-img" alt="">
+      </div>
+
+    </div>
+  </nav>
+<!-- ////////////////////////////////////////////////////////// -->
+  <!-- Main Section -->
+  <section class="recipe-section py-5">
+
+    <div class="container">
+
+      <div class="recipe-card row g-0 shadow-lg" id="recipe-card">
+
+        <!-- Left Side -->
+        <div class="col-lg-5 position-relative image-side">
+
+          <img
+            src="./image/sambosa.jfif"
+            class="w-100 h-100 recipe-img"
+            alt="recipe-img" id="recipe-img"
+          >
+
+          <!-- Rating -->
+          <div class="rating-box shadow" id="rating-box">
+
+            <i class="fa-solid fa-star text-warning"></i>
+
+            <span class="fw-bold" id="rating">4.8</span>
+
+            <span class="text-secondary" id="reviews">(234 reviews)</span>
+
+          </div>
+
+          <!-- Bottom Time Box -->
+          <div class="time-box shadow">
+
+            <div class="time-item">
+              <i class="fa-solid fa-clock " style="color: orangered;"></i>
+              <p >Prep Time</p>
+              <h6 id="prepTime">30 min</h6>
+            </div>
+
+            <div class="time-item">
+              <i class="fa-solid fa-fire-burner" style="color: red;"></i>
+              <p>Cook Time</p>
+              <h6 id="cookTime">20 min</h6>
+            </div>
+
+            <div class="time-item">
+              <i class="fa-solid fa-users" style="color: rgb(75, 130, 240);"></i>
+              <p>Servings</p>
+              <h6 id="serving">4 people</h6>
+            </div>
+
+          </div>
+
+        </div>
+<!-- ////////////////////////////////////////////////////////////////// -->
+        <!-- Right Side -->
+        <div class="col-lg-7 ">
+          <div class="right-side">
+
+          <!-- Tags -->
+          <div class="d-flex gap-2 mb-3">
+
+            <span class="badge green-badge" id="level">
+              Intermediate
+            </span>
+
+            <span class="badge blue-badge" id="nationality">
+              Mediterranean
+            </span>
+
+          </div>
+
+          <!-- Title -->
+          <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+
+            <div>
+              <h1 class="fw-bold " id="mealName" style="font-size: 36px;">
+                Greek Moussaka
+              </h1>
+
+              <p class="recipe-disc" id="recipeDesc" >
+                Traditional layered eggplant casserole with lamb
+              </p>
+            </div>
+
+            <div class="d-flex gap-2">
+
+              <button class="icon-btn">
+                <i class="fa-solid fa-bookmark"></i>
+              </button>
+
+              <button class="icon-btn">
+                <i class="fa-solid fa-share-nodes"></i>
+              </button>
+
+            </div>
+
+          </div>
+
+          <!-- Alert -->
+           <div id="isExtended">
+          <div class="alert-box mt-2 d-flex gap-3  align-items-center" >
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+            <div>
+              <h6 class="">
+                Extended Preparation Time
+              </h6>
+
+              <p class="m-0 ">
+                This recipe requires more than 60 minutes to prepare.
+                Plan accordingly!
+              </p>
+            </div>
+
+          </div></div>
+
+          <!-- Tabs -->
+          <ul class="nav nav-tab mt-4 gap-3" id="recipeTabs">
+
+            <li class="nav-item">
+              <button
+                class="nav-link active"
+                data-bs-toggle="pill"
+                data-bs-target="#ingredients"
+              >
+                <i class="fa-solid fa-list-check"></i>
+                Ingredients
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button
+                class="nav-link"
+                data-bs-toggle="pill"
+                data-bs-target="#instructions"
+              >
+                <i class="fa-solid fa-book-open"></i>
+                Instructions
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button
+                class="nav-link"
+                data-bs-toggle="pill"
+                data-bs-target="#nutrition"
+              >
+                <i class="fa-solid fa-chart-pie"></i>
+                Nutrition
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button
+                class="nav-link"
+                data-bs-toggle="pill"
+                data-bs-target="#tips"
+              >
+                <i class="fa-solid fa-lightbulb"></i>
+                Chef's Tips
+              </button>
+            </li>
+
+          </ul>
+
+          <!-- Tabs Content -->
+          <div class="tab-content mt-4">
+
+            <!-- Ingredients -->
+            <div class="tab-pane fade show active ingredient-box"id="ingredients" >
+
+              <div class="content-box ">
+                <div >
+
+                <div class="ingredient-item">
+                  <span>1</span>
+                  <p>3 large eggplants, sliced</p>
+                </div>
+
+                <div class="ingredient-item">
+                  <span>2</span>
+                  <p>500g ground lamb</p>
+                </div>
+
+                <div class="ingredient-item">
+                  <span>3</span>
+                  <p>400g canned tomatoes</p>
+                </div>
+
+                <div class="ingredient-item">
+                  <span>4</span>
+                  <p>1 onion, diced</p>
+                </div>
+
+                <div class="ingredient-item">
+                  <span>5</span>
+                  <p>3 garlic cloves</p>
+                </div>
+
+                <div class="ingredient-item">
+                  <span>6</span>
+                  <p>500ml béchamel sauce</p>
+                </div>
+
+                <div class="ingredient-item">
+                  <span>7</span>
+                  <p>100g parmesan cheese</p>
+                </div>
+
+                <div class="ingredient-item">
+                  <span>8</span>
+                  <p>Cinnamon and oregano</p>
+                </div>
+
+                <div class="ingredient-item">
+                  <span>9</span>
+                  <p>Olive oil</p>
+                </div></div>
+
+
+              </div>
+
+            </div>
+
+            <!-- Instructions -->
+            <div class="tab-pane fade instruction-box"id="instructions">
+
+              <div class="content-box   "    style="background-color: rgb(255, 255, 255);">
+<div>
+                <div class="step-item">
+                  <span>1</span>
+                  <p>Slice eggplants, salt them, and let sit for 30 minutes. Rinse and pat dry.</p>
+                </div>
+
+                <div class="step-item">
+                  <span>2</span>
+                  <p>Brush eggplant slices with olive oil, grill or bake until softened.</p>
+                </div>
+
+                <div class="step-item">
+                  <span>3</span>
+                  <p>Cook ground lamb with onion and garlic. Add tomatoes, cinnamon, oregano. Simmer 20 minutes.</p>
+                </div>
+
+                <div class="step-item">
+                  <span>4</span>
+                  <p>Preheat oven to 180°C (350°F).</p>
+                </div>
+
+                <div class="step-item">
+                   <span>5</span>
+                  <p>Layer in baking dish: eggplant, meat sauce, eggplant, meat sauce. Top with béchamel and parmesan.</p>
+                </div>
+
+                <div class="step-item">
+                  <span>6</span>
+                  <p>Bake for 45 minutes until golden. Let rest 15 minutes before serving.</p>
+                </div></div>
+
+              </div>
+
+            </div>
+
+            <!-- Nutrition -->
+            <div class="tab-pane fade" id="nutrition">
+
+              <div class="content-box nutrition-box " >
+<div id="nutritionContent">
+                <div class="nutrition-item">
+                  <div><span class="nutrition-icon" style="background-color: oklch(95.4% .038 75.164);"><i class="fa-solid fa-fire" style="color: orangered;"></i></span>
+                  <span class="nutration-name">Calories</span>
+                </div>
+                  <h5>580 kcal</h5>
+                </div>
+
+                <div class="nutrition-item">
+                  <div><span class="nutrition-icon" style="background-color: rgb(206, 215, 243);"><i class="fa-solid fa-dumbbell" style="color: rgb(0, 47, 255);"></i></span>
+                    
+                    <span class="nutration-name">Protein</span>
+                  </div>
+                  
+                  <h5>36g</h5>
+                </div>
+
+                <div class="nutrition-item">
+                  <div><span class="nutrition-icon" style="background-color: rgb(244, 246, 203);"><i class="fa-solid fa-wheat-awn" style="color: orange;"></i></span>
+                    
+                   <span class="nutration-name">Carbohydrates</span> 
+                  </div>
+                  
+                  <h5>32g</h5>
+                </div>
+
+                <div class="nutrition-item">
+                  <div> <span class="nutrition-icon" style="background-color: rgb(254, 203, 203);"><i class="fa-solid fa-droplet" style="color: red;"></i></span>
+                  <span class="nutration-name">Fat</span></div>
+                  
+                  <h5>32g</h5>
+                </div>
+
+                <div class="nutrition-item">
+                  <div> <span class="nutrition-icon" style="background-color: rgb(204, 247, 204);"><i class="fa-solid fa-seedling" style="color: green;"></i></span>
+                  <span class="nutration-name">Fiber</span></div>
+                  
+                  <h5>8g</h5>
+                </div>
+
+                <div class="nutrition-item">
+                  <div> <span class="nutrition-icon" style="background-color:rgb(243, 222, 248) ;"><i class="fa-solid fa-cube" style="color: rgb(204, 0, 255);"></i></span>
+                  <span class="nutration-name">Sodium</span></div>
+                 
+                  <h5>820mg</h5>
+                </div></div>
+
+              </div>
+
+            </div>
+
+            <!-- Tips -->
+            <div class="tab-pane fade" id="tips">
+
+              <div class=" tips-box">
+
+                <div class="tip-item">
+                  <div class="tip-icon"><i class="fa-solid fa-check"></i></div>
+                  
+                  <p>
+                    Salt eggplant to remove bitterness
+                  </p>
+                </div>
+
+                <div class="tip-item">
+                  <div class="tip-icon"><i class="fa-solid fa-check"></i></div>
+                  <p>
+                    Don't skip the resting time - it helps set the layers
+                  </p>
+                </div>
+
+                <div class="tip-item">
+                  <div class="tip-icon"><i class="fa-solid fa-check"></i></div>
+                  <p>
+                    Use ground beef if lamb is unavailable
+                  </p>
+                </div>
+
+                <div class="tip-item">
+                  <div class="tip-icon"><i class="fa-solid fa-check"></i></div>
+                  <p>
+                    Make ahead and reheat for easier serving
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <button type="button" class="mt-4 last-button shadow-lg"  onclick="newRecipe()" ><i class="fa-solid fa-arrows-rotate"></i> Try Another Recipe</button>
+
+        </div>
+</div>
+      </div>
+
+    </div>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
